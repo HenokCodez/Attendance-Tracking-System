@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Attendance System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container"
+        style="max-width: 800px; display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <!-- Check-in Section -->
+        <div>
+            <h2>Record Attendance</h2>
+            <form action="AttendanceServlet" method="post">
+                <div class="form-group">
+                    <label for="studentCode">Student Roll No</label>
+                    <input type="text" id="studentCode" name="code" placeholder="e.g. ugr/1234/16" required>
+                </div>
+                <button type="submit">Check-in Student</button>
+            </form>
+        </div>
+
+        <!-- Add Student Section -->
+        <div style="border-left: 1px solid var(--border-color); padding-left: 2rem;">
+            <h2>Add New Student</h2>
+            <form action="StudentServlet" method="post">
+                <div class="form-group">
+                    <label for="name">Student Name</label>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="rollNo">Roll Number</label>
+                    <input type="text" id="rollNo" name="rollNo" placeholder="e.g. ugr/1234/16" required>
+                </div>
+                <button type="submit" style="background-color: var(--secondary-color);">Add Student</button>
+            </form>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem; width: 100%;">
+        <a href="ReportServlet"
+            style="background: white; padding: 0.5rem 1rem; border-radius: 0.5rem; box-shadow: var(--shadow-sm);">View
+            Attendance Report</a>
+    </div>
+</body>
+
+</html>
