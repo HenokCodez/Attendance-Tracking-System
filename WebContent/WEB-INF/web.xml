@@ -1,11 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
   <display-name>AttendanceTrackingSystem</display-name>
-  <welcome-file-list><welcome-file>index.html</welcome-file></welcome-file-list>
-  <servlet><servlet-name>LoginServlet</servlet-name><servlet-class>com.attendance.controller.LoginServlet</servlet-class></servlet>
-  <servlet-mapping><servlet-name>LoginServlet</servlet-name><url-pattern>/LoginServlet</url-pattern></servlet-mapping>
-  <servlet><servlet-name>StudentServlet</servlet-name><servlet-class>com.attendance.controller.StudentServlet</servlet-class></servlet>
-  <servlet-mapping><servlet-name>StudentServlet</servlet-name><url-pattern>/StudentServlet</url-pattern></servlet-mapping>
-  <servlet><servlet-name>AttendanceServlet</servlet-name><servlet-class>com.attendance.controller.AttendanceServlet</servlet-class></servlet>
-  <servlet-mapping><servlet-name>AttendanceServlet</servlet-name><url-pattern>/AttendanceServlet</url-pattern></servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.attendance.controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AttendanceServlet</servlet-name>
+    <servlet-class>com.attendance.controller.AttendanceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AttendanceServlet</servlet-name>
+    <url-pattern>/AttendanceServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ReportServlet</servlet-name>
+    <servlet-class>com.attendance.controller.ReportServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReportServlet</servlet-name>
+    <url-pattern>/ReportServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>StudentServlet</servlet-name>
+    <servlet-class>com.attendance.controller.StudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentServlet</servlet-name>
+    <url-pattern>/StudentServlet</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
